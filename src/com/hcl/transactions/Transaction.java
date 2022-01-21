@@ -2,15 +2,17 @@ package com.hcl.transactions;
 
 import java.util.Date;
 
+enum OperationType { ADD, SUBSTRACTION; }
+
 public class Transaction {
 	
 	private float transactionAmount;
 	private Date transactionDate;
-	private String operationType;
+	private OperationType operationType;
 	private int id_account;
 	private int id_card;
 	
-	public Transaction(float transactionAmount, Date transactionDate, String operationType, int id_account, int id_card) {
+	public Transaction(float transactionAmount, Date transactionDate, OperationType operationType, int id_account, int id_card) {
 		super();
 		this.transactionAmount = transactionAmount;
 		this.transactionDate = transactionDate;
@@ -31,10 +33,10 @@ public class Transaction {
 	public void setTransactionDate(Date transactionDate) {
 		this.transactionDate = transactionDate;
 	}
-	public String getOperationType() {
+	public OperationType getOperationType() {
 		return operationType;
 	}
-	public void setOperationType(String operationType) {
+	public void setOperationType(OperationType operationType) {
 		this.operationType = operationType;
 	}
 	public int getId_account() {
